@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
+    <script type="text/javascript" src="bower_components/momentjs/min/moment.min.js"></script>
+    <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+    <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="main.css"/>
+    <title>MBTA Multivariate HeatMap</title>
+  </head>
+  <body>
+    <h1>MBTA Multivariate Heatmap</h1>
+    <div class="header">
+      <div class="notes">Red line train metrics for February 3rd and 4th, 2014.  Groups from left to right represent delay from Alewife to Braintree/Ashmont (gray), entrances (green), exits (blue), and delay from Braintree/Ashmont to Alewife (gray).  Each column represents a stop.  Mouse over a location in the grid for more information.  Press together to show all metrics for a stop side by side.</div>
+      <div class="progress"></div>
+      <button class="btn btn-default button-together">Together</button>
+      <button class="btn btn-default button-separate">Separate</button>
+      <a href="?mike" class="btn btn-default button-mike">Mike</a>
+      <a href="?brian" class="btn btn-default button-brian">Brian</a>
+    </div>
+    <div class="graphic"></div>
+
+    <script>
+    document.write('<script src="' + (window.location.search.indexOf('mike') > -1 ? 'main2.js' : 'main.js') + '"><\/script>')
+    </script>
+  </body>
+</html>

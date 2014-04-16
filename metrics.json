@@ -1,0 +1,10 @@
+{
+  "turnstile": {
+    "min": 0,
+    "mean": 19.784142578759337,
+    "max": 247,
+    "count": 24632,
+    "totalIns": 181846,
+    "totalOuts": 305477
+  }
+}
