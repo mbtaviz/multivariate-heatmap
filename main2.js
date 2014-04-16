@@ -3,7 +3,7 @@ var rowHeight = 9;
 var gutter = 0;
 var minArmLength = 1;
 var maxArmLength = 5;
-var minStrokeWidth = 1.5;
+var minStrokeWidth = 0.5;
 var maxStrokeWidth = 2.5;
 var stopWidth = maxArmLength * 2 + gutter;
 
@@ -46,7 +46,7 @@ d3.json('dataPerStop.json')
             .range([0, redLineStops.length * stopWidth]);
           var yScale = d3.time.scale()
             .domain([d3.min(times(data)), d3.max(times(data))])
-            .range([0, times(data).length * rowHeight]);
+            .rangeRound([0, times(data).length * rowHeight]);
 
           var hourAxis = d3.svg.axis()
             .tickFormat(d3.time.format("%-I:%M %p"))
@@ -132,8 +132,6 @@ d3.json('dataPerStop.json')
                 var xLocation = index * stopWidth;
                 return 'translate(' + (xLocation) + ',' + (rowHeight/2) + ')';
               });
-
-
           
           // draw our boxes
           // time to 'before'
@@ -181,7 +179,7 @@ d3.json('dataPerStop.json')
               .attr('x2', dir === 'left' ? negate(lengthScale) : dir === 'right' ? lengthScale : 0)
               .attr('y2', dir === 'up' ? negate(lengthScale) : dir === 'down' ? lengthScale : 0)
               .attr('stroke', colorScale)
-              .attr('stroke-width', strokeWidthScale);
+              .style('stroke-width', strokeWidthScale);
           }
 
         // -----------------------------------------------

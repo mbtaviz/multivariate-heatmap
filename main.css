@@ -39,7 +39,7 @@ svg {
 }
 
 .line {
-  shape-rendering: crispEdges;
+  /*shape-rendering: crispEdges;*/
   /*stroke-width: 1.5px;*/
 }
 
