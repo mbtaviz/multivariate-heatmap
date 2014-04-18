@@ -30,6 +30,17 @@ body {
 svg {
   font-size: 10px;
 }
+.exits {
+  display: none; /* todo - display exits? */
+  stroke-width: 0.5px;
+  stroke: black;
+}
+
+path {
+  stroke: black;
+  stroke-opacity: 0.3;
+  stroke-width: 0.5px;
+}
 
 .axis path,
 .axis line {
